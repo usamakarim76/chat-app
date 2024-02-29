@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1068460089832",
+    "project_id": "i-chat-app-643f7",
+    "storage_bucket": "i-chat-app-643f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068460089832:android:2fdecb68de1ba66e1a445d",
+        "android_client_info": {
+          "package_name": "com.ichatapp.i_chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdE9KIJqOAOfvyAuB_2PL4pav46mwFxpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
