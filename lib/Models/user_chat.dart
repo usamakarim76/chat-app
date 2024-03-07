@@ -41,11 +41,10 @@ class UserChat {
       nickname = doc.get(FirestoreConstants.nickname);
     } catch (e) {}
     return UserChat(
-      id: doc.id,
-      photoUrl: photoUrl,
-      nickname: nickname,
-      aboutMe: aboutMe,
-      phoneNumber: phoneNumber
-    );
+        id: doc.id,
+        photoUrl: photoUrl,
+        nickname: nickname,
+        aboutMe: aboutMe,
+        phoneNumber: phoneNumber);
   }
 }
