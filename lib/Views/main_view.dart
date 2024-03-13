@@ -16,13 +16,16 @@ class _MainScreenState extends State<MainScreen> {
           ? ColorConstants.whiteColor
           : ColorConstants.blackColor,
       appBar: AppBar(
-        leading: IconButton(
-          icon: Switch(
-            value: ColorCheck.isWhite,
-            onChanged: (val){
-
-            },
-          ), onPressed: () {  },
+        backgroundColor: ColorCheck.isWhite
+            ? ColorConstants.whiteColor
+            : ColorConstants.blackColor,
+        leading: Switch(
+          value: ColorCheck.isWhite,
+          onChanged: (val) {
+            setState(() {
+              ColorCheck.isWhite = val;
+            });
+          },
         ),
       ),
     );
