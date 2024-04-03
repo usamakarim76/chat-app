@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +6,6 @@ import 'package:i_chat_app/Constants/images.dart';
 import 'package:i_chat_app/Constants/text_constants.dart';
 import 'package:i_chat_app/Providers/auth_provider.dart';
 import 'package:i_chat_app/ReusableWidgets/reusable_widgets.dart';
-import 'package:i_chat_app/Utils/snakbar.dart';
 import 'package:i_chat_app/Utils/toast.dart';
 import 'package:i_chat_app/Views/main_view.dart';
 import 'package:lottie/lottie.dart';
