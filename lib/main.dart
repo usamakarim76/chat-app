@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           providers: [
             ChangeNotifierProvider<AuthEmailProvider>(
               create: (_) => AuthEmailProvider(
-                  firebaseFirestore: FirebaseFirestore.instance,
+                  firebaseFireStore: FirebaseFirestore.instance,
                   googleSignIn: GoogleSignIn(),
                   firebaseAuth: FirebaseAuth.instance,
                   prefs: prefs),

@@ -18,7 +18,7 @@ enum Status {
 class AuthEmailProvider extends ChangeNotifier {
   final FirebaseAuth firebaseAuth;
   final GoogleSignIn googleSignIn;
-  final FirebaseFirestore firebaseFirestore;
+  final FirebaseFirestore firebaseFireStore;
   final SharedPreferences prefs;
 
   Status _status = Status.uninitialized;
@@ -26,7 +26,7 @@ class AuthEmailProvider extends ChangeNotifier {
   Status get status => _status;
 
   AuthEmailProvider(
-      {required this.firebaseFirestore,
+      {required this.firebaseFireStore,
       required this.googleSignIn,
       required this.firebaseAuth,
       required this.prefs});
@@ -54,13 +54,13 @@ class AuthEmailProvider extends ChangeNotifier {
       User? firebaseUser =
           (await firebaseAuth.signInWithCredential(credential)).user;
       if (firebaseUser != null) {
-        final QuerySnapshot result = await firebaseFirestore
+        final QuerySnapshot result = await firebaseFireStore
             .collection(FirestoreConstants.pathUserCollection)
             .where(FirestoreConstants.id, isEqualTo: firebaseUser.uid)
             .get();
         final List<DocumentSnapshot> document = result.docs;
         if (document.isEmpty) {
-          firebaseFirestore
+          firebaseFireStore
               .collection(FirestoreConstants.pathUserCollection)
               .doc(firebaseUser.uid)
               .set({
