@@ -33,5 +33,5 @@ class _MainScreenState extends State<MainScreen> {
 }
 
 class ColorCheck {
-  static bool isWhite = false;
+  static bool isWhite = true;
 }
